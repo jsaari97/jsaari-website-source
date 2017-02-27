@@ -1,0 +1,20 @@
+section(id="work")
+  h3.section-header Work
+  - var count = 0
+  each item in work
+    article(
+      class=(count % 2 == 0 ? 'left' : 'right')
+    )
+      .article-body
+        h5.title #{item.title}
+        p.description !{item.description}
+        if item.button
+          a(href=item.button.url, target="_blank"): button #{item.button.title}
+      .article-image-container
+        img(
+          data-original="images/" + item.image + "-large.jpg"
+          data-original-set="images/" + item.image + "-small.jpg 480w, images/" + item.image + "-medium.jpg 768w, images/" + item.image + "-large.jpg 1280w, images/" + item.image + "-xlarge.jpg 1920w"
+          sizes="(min-width: 600px) 50vw, 100vw"
+          alt=item.alt
+        )
+    - count++

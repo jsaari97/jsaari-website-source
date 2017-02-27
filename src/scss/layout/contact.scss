@@ -1,0 +1,57 @@
+.contact {
+  &-container {
+    margin: 80px 0 60px;
+    column-count: 2;
+    column-gap: 40px;
+
+    @include for-phone-only() {
+      column-count: 1;
+      margin: 16px 0 8px;
+      width: 100%;
+    }
+    @include for-tablet-portrait-up() {
+      width: 90%;
+    }
+    @include for-desktop-up() {
+      width: 800px;
+    }
+  }
+  &-item {
+    position: relative;
+    display: flex;
+    background: #fff;
+    border-radius: 2px;
+    text-align: center;
+    break-inside: avoid;
+    margin-bottom: 40px;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-decoration: none;
+    color: $header-color;
+    font-size: 1.6rem;
+
+    @include for-phone-only() {
+      margin: 0 8px 8px;
+    }
+
+    span {
+      transition: transform 200ms ease;
+      z-index: 5;
+    }
+    &:hover {
+      span {
+        transform: translateX(24px);
+      }
+      svg {
+        fill: $header-color;
+      }
+    }
+
+    svg {
+      @include size(32px);
+      fill: $font-color;
+      margin: 24px;
+      transition: fill 200ms ease;
+    }
+  }
+}

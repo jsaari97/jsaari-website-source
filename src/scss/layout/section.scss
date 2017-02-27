@@ -1,0 +1,8 @@
+.section-header {
+  font-size: 4.8rem;
+  margin: 80px 0;
+  @include for-phone-only() {
+    margin: 40px 0;
+    font-size: 3.2rem;
+  }
+}

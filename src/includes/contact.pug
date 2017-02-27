@@ -1,0 +1,13 @@
+section(id="contact")
+  h3.section-header Contact
+  .about-section
+    .contact-container
+      each item in contact
+        a(
+          href=item.url,
+          target=(item.openTab == true ? '_blank' : '')
+          class="contact-item"
+        )
+          svg: use(xlink:href="./svg/sprite.svg#" + item.icon)
+          span #{item.username}
+          .rippleJS

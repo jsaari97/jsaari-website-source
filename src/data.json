@@ -1,0 +1,170 @@
+{
+  "title": "Jim Saari's Personal Website - Developer & Designer",
+  "description": "Web developer and designer - Personal portfolio website of Jim Saari.",
+  "phone": "50 5411606",
+  "email": "jim.saari97@gmail.com",
+  "menu": [
+    {
+      "title": "Skills",
+      "path": "skills"
+    },
+    {
+      "title": "About",
+      "path": "about"
+    },
+    {
+      "title": "Work",
+      "path": "work"
+    },
+    {
+      "title": "Contact",
+      "path": "contact"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Design",
+      "amount": 190
+    },
+    {
+      "name": "Frontend",
+      "amount": 170
+    },
+    {
+      "name": "Backend",
+      "amount": 125
+    },
+    {
+      "name": "Sysadmin",
+      "amount": 90
+    }
+  ],
+  "about": [
+    {
+      "title": "Info",
+      "icon": "person",
+      "list": [
+        "Jim Saari",
+        "19 years old"
+      ]
+    },
+    {
+      "title": "Hobbies",
+      "icon": "hobbies",
+      "list": [
+        "Programming",
+        "Game Development",
+        "Art",
+        "Running",
+        "Lifting"
+      ]
+    },
+    {
+      "title": "Location",
+      "icon": "location",
+      "list": [
+        "Kronoby",
+        "Western Finland",
+        "Finland"
+      ]
+    },
+    {
+      "title": "Languages",
+      "icon": "language",
+      "list": [
+        "Swedish",
+        "Finnish",
+        "English"
+      ]
+    },
+    {
+      "title": "Programming",
+      "icon": "code",
+      "list": [
+        "JavaScript",
+        "HTML5",
+        "Sass",
+        "PHP",
+        "C#"
+      ]
+    },
+    {
+      "title": "Software",
+      "icon": "apps",
+      "list": [
+        "Photoshop",
+        "Illustrator",
+        "Sketch",
+        "Blender",
+        "Vegas Pro",
+        "Unity"
+      ]
+    }
+  ],
+  "work": [
+    {
+      "title": "Domain Dynamo",
+      "description": "A tool to generate domain names.<br>Built with Vue.js and Express.js.",
+      "image": "dynamo",
+      "alt": "Domain Dynamo",
+      "button": {
+        "title": "Try it",
+        "url": "/domain"
+      }
+    },
+    {
+      "title": "Bird Droppings",
+      "description": "Mobile game about a pooping bird.<br>Made in Unity and published on Android.",
+      "image": "droppings",
+      "alt": "Bird Droppings",
+      "button": {
+        "title": "Google Play",
+        "url": "https://play.google.com/store/apps/details?id=com.jimsaari.birddroppings"
+      }
+    },
+    {
+      "title": "Workstation",
+      "description": "Illustration of my workstation.<br>Rendered with Blender Cycles.",
+      "image": "workstation",
+      "alt": "Workstation"
+    }
+  ],
+  "contact": [
+    {
+      "username": "jim.saari97@gmail.com",
+      "url": "mailto:jim.saari97@gmail.com",
+      "icon": "mail",
+      "openTab": false
+    },
+    {
+      "username": "050 5411606",
+      "url": "tel:+358505411606",
+      "icon": "phone",
+      "openTab": false
+    },
+    {
+      "username": "Jim Saari",
+      "url": "https://www.linkedin.com/in/jim-saari/",
+      "icon": "linkedin",
+      "openTab": true
+    },
+    {
+      "username": "@jSaari97",
+      "url": "https://twitter.com/jSaari97",
+      "icon": "twitter",
+      "openTab": true
+    },
+    {
+      "username": "jsaari97",
+      "url": "https://github.com/jsaari97",
+      "icon": "github",
+      "openTab": true
+    },
+    {
+      "username": "@langkalisa",
+      "url": "https://www.instagram.com/langkalisa",
+      "icon": "instagram",
+      "openTab": true
+    }
+  ]
+}

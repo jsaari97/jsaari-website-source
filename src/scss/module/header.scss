@@ -1,0 +1,115 @@
+.headroom {
+  will-change: transform;
+  transition: transform 200ms linear, background 200ms ease;
+  height: 100px;
+  width: 100%;
+  @include position(fixed, 0 null null 0);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  z-index: $z-header;
+  @include for-phone-only() {
+    height: 64px;
+  }
+}
+.headroom--pinned {
+  transform: translateY(0%);
+}
+.headroom--unpinned {
+  transform: translateY(-100%);
+}
+.header-container {
+  width: 800px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+
+  @include for-phone-only() {
+    width: 100%;
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
+
+  a,
+  span {
+    text-decoration: none;
+    color: #fff;
+    cursor: default;
+
+    &:hover {
+      text-decoration: underline;
+      cursor: default;
+    }
+  }
+}
+.header-logo {
+  flex: 0 1 40px;
+  svg {
+    @include size(48px);
+    opacity: .8;
+  }
+  @include for-phone-only() {
+    display: none;
+  }
+}
+.header-contact {
+  flex: 0;
+  margin-left: 24px;
+  display: flex;
+  flex-flow: column wrap;
+  @include for-phone-only() {
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin: 8px 0;
+  }
+  a {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    @include for-phone-only() {
+      margin-right: 8px;
+      &:first-of-type {
+        display: none;
+      }
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  span {
+    order: 2;
+    margin-left: 8px;
+    font-size: 1.2rem;
+  }
+  svg {
+    fill: #fff;
+    opacity: .8;
+    order: 1;
+    @include size(16px);
+  }
+}
+.header-menu {
+  margin-left: auto;
+  @include for-phone-only() {
+    margin: 0 auto;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    display: inline-block;
+    padding: 0 16px;
+    font-size: 2rem;
+    font-weight: 300;
+    @include for-phone-only() {
+      line-height: 32px;
+      font-size: 5vw;
+      font-weight: 400;
+    }
+  }
+}

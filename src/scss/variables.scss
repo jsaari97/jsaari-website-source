@@ -1,0 +1,12 @@
+$primary-color: #16A085;
+$cont-color: #EACE42;
+$header-color: darken(#536B73, 3.5%);
+$font-color: lighten($header-color, 11%);
+
+// Fonts
+$base-font: 'Roboto', sans-serif; 
+
+// z-index
+$z-header: 5;
+$z-landing: 3;
+$z-to-top: 2;

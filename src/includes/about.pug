@@ -1,0 +1,11 @@
+section(id="about")
+  h3.section-header About
+  .about-section
+    .about-container
+      each item in about
+        .about-item
+          svg: use(xlink:href="./svg/sprite.svg#" + item.icon)
+          h5.about-item-header #{item.title}
+          ul.about-item-list
+            each listItem in item.list
+              li #{listItem}

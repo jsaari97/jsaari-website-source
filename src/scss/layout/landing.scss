@@ -1,0 +1,80 @@
+.landing {
+  @include size(100%, 100vh);
+  background: linear-gradient( -45deg, $cont-color, $primary-color );
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  z-index: $z-landing;
+}
+.landing-logo {
+  flex: 0 0 250px;
+  @include for-phone-only() {
+    flex-basis: 20vh;
+    margin-top: 10vh;
+  }
+  @include for-phone-only-landscape() {
+    flex-basis: 10vh;
+    margin-top: 10vh;
+  }
+}
+.landing-header {
+  color: #fff;
+  font-size: 7.2rem;
+  font-weight: 100;
+  margin: 40px 0 0;
+  @include for-phone-only() {
+    font-size: 4.8rem;
+    margin-top: 2vh;
+  }
+  @include for-phone-only-landscape() {
+    font-size: 3.8rem;
+    margin-top: 2vh;
+  }
+}
+.landing-subheader {
+  color: #fff;
+  font-size: 3.6rem;
+  margin: 32px 0 0;
+  @include for-phone-only() {
+    font-size: 2.4rem;
+    margin-top: 2.5vh;
+  }
+  @include for-phone-only-landscape() {
+    font-size: 2rem;
+    margin-top: 2vh;
+  }
+}
+.landing-contact-button {
+  margin: 64px 0 0;
+  cursor: default;
+  @include for-phone-only() {
+    margin-top: 7.5vh;
+  }
+  @include for-phone-only-landscape() {
+    margin-top: 6vh;
+  }
+  button {
+    @include size(200px, 64px);
+    border-radius: 32px;
+    background: transparent;
+    box-shadow: none;
+    border: 2px solid #fff;
+    font-size: 2.4rem;
+    @include for-phone-only() {
+      @include size(160px, 48px);
+      font-size: 2rem;
+    }
+    @include for-phone-only-landscape() {
+      @include size(160px, 40px);
+      font-size: 1.8rem;
+    }
+  }
+}
+.landing-arc {
+  @include position(absolute, null null 0 0);
+  height: 100px;
+  width: 100%;
+  @include for-phone-only() {
+    height: 32px;
+  }
+}

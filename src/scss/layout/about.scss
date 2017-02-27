@@ -1,0 +1,70 @@
+.about {
+  &-section {
+    width: 100%;
+    background: linear-gradient( -45deg, $cont-color, $primary-color );
+    display: flex;
+    justify-content: center;
+  }
+  &-container {
+    margin: 80px 0;
+    column-gap: 40px;
+
+    @include for-phone-only() {
+      column-count: 1;
+      column-gap: 0;
+      margin: 16px 0 8px;
+      width: 100%;
+    }
+    @include for-tablet-portrait-up() {
+      width: 80%;
+      column-count: 2;
+    }
+    @include for-desktop-up() {
+      width: 960px;
+      column-count: 3;
+    }
+  }
+  &-item {
+    background: #fff;
+    border-radius: 2px;
+    text-align: center;
+    break-inside: avoid;
+    padding-top: 16px;
+
+    @include for-phone-only() {
+      margin-left: 8px;
+      margin-right: 8px;
+    }
+
+    svg {
+      @include size(48px);
+      fill: $header-color;
+    }
+  }
+  &-item-header {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin: 0;
+    line-height: 40px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid lighten($header-color, 50%);
+  }
+  &-item-list {
+    list-style: none;
+    padding: 0;
+    padding-bottom: 40px;
+    margin: 24px 0 40px;
+
+    @include for-phone-only() {
+      margin-bottom: 8px;
+    }
+
+    li {
+      font-size: 1.6rem;
+      line-height: 3rem;
+      @include for-phone-only() {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+button {
+  @include size(160px, 40px);
+  position: relative;
+  font-weight: 400;
+  border-radius: 20px;
+  border: 0;
+  color: #fff;
+  font-size: 1.8rem;
+  background: $primary-color;
+}

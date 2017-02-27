@@ -1,0 +1,42 @@
+footer {
+  background: $header-color;
+  display: flex;
+  // margin-top: 80px;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  @include for-phone-only() {
+    height: 120px;
+  }
+  .sitemap,
+  .back-to-top,
+  .copyright {
+    font-size: 1.6rem;
+    color: #ddd;
+    @include for-phone-only() {
+      font-size: 1.4rem;
+    }
+  }
+  .back-to-top,
+  .sitemap {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .back-to-top,
+  .copyright {
+    margin-left: 16px;
+    @include for-phone-only() {
+      margin-left: 8px;
+    }
+    &::before {
+      content: "|";
+      margin-right: 16px;
+      @include for-phone-only() {
+        margin-right: 8px;
+      }
+    }
+  }
+}

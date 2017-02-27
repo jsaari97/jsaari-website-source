@@ -1,0 +1,19 @@
+header
+  section.header-container
+    div.header-logo
+      a(href="#"): svg: use(xlink:href="./svg/sprite.svg#logo")
+    div.header-contact
+      a(href='#about')
+        span Jim Saari
+        svg: use(xlink:href="./svg/sprite.svg#person")
+      a(href='tel:+358' + phone)
+        span 0#{phone}
+        svg: use(xlink:href="./svg/sprite.svg#phone")
+      a(href='mailto:' + email)
+        span #{email}
+        svg: use(xlink:href="./svg/sprite.svg#mail")
+    nav.header-menu
+      ul
+        each item in menu
+          li
+            a(href='#' + item.path) #{item.title}
