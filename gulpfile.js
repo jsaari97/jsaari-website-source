@@ -16,6 +16,7 @@ var autoprefixer = require('autoprefixer')
 var bourbon     = require("bourbon").includePaths
 var sassGlob    = require('gulp-sass-glob')
 var responsive  = require('gulp-responsive')
+var sitemap     = require('gulp-sitemap')
 
 function swallowError (error) {
   console.log(error.toString())
@@ -27,21 +28,21 @@ gulp.task('images', function () {
     .pipe(responsive({
       '*': [{
         width: 480,
-        quality: 90,
+        quality: 95,
         rename: {
           suffix: '-small',
           extname: '.jpg',
         },
       }, {
         width: 768,
-        quality: 90,
+        quality: 95,
         rename: {
           suffix: '-medium',
           extname: '.jpg',
         },
       }, {
         width: 1280,
-        quality: 90,
+        quality: 95,
         rename: {
           suffix: '-large',
           extname: '.jpg',
@@ -49,7 +50,7 @@ gulp.task('images', function () {
       },
       {
         width: 1920,
-        quality: 90,
+        quality: 95,
         rename: {
           suffix: '-xlarge',
           extname: '.jpg',
@@ -136,7 +137,7 @@ gulp.task('serve', function() {
 gulp.task('default', ['pug', 'js', 'sass', 'svg', 'images', 'serve'])
 
 //Production
-gulp.task('production', ['pug', 'js-production', 'sass-production', 'svg', 'images'])
+gulp.task('production', ['sitemap', 'js-production', 'sass-production', 'svg', 'images'])
 
 gulp.task('js-production', function () {
     return browserify({entries: './src/js/main.js', debug: true})
@@ -157,4 +158,14 @@ gulp.task('sass-production', function() {
         }))
         .pipe(postcss([ autoprefixer() ]))
         .pipe(gulp.dest("dist/css"))
+})
+
+gulp.task('sitemap', ['pug'], function() {
+  return gulp.src('dist/**/*.html', {
+          read: false
+        })
+        .pipe(sitemap({
+          siteUrl: 'https://jsaari.com'
+        }))
+        .pipe(gulp.dest('./dist'))
 })
