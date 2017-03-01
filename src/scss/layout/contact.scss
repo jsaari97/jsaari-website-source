@@ -38,12 +38,19 @@
       transition: transform 200ms ease;
       z-index: 5;
     }
-    &:hover {
-      span {
-        transform: translateX(24px);
+    @include for-tablet-portrait-up() {
+      &:hover {
+        span {
+          transform: translateX(24px);
+        }
+        svg {
+          fill: $header-color;
+        }
       }
-      svg {
-        fill: $header-color;
+    }
+    @include for-phone-only() {
+      .rippleJS {
+        display: none;
       }
     }
 

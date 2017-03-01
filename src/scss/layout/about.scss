@@ -30,6 +30,8 @@
     text-align: center;
     break-inside: avoid;
     padding-top: 16px;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
 
     @include for-phone-only() {
       margin-left: 8px;

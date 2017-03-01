@@ -6,10 +6,11 @@ section(id="work")
       class=(count % 2 == 0 ? 'left' : 'right')
     )
       .article-body
-        h5.title #{item.title}
-        p.description !{item.description}
+        h5.article-title #{item.title}
+        p.article-description !{item.description}
         if item.button
           a(href=item.button.url, target="_blank"): button #{item.button.title}
+            .rippleJS
       .article-image-container
         img(
           data-original="images/" + item.image + "-large.jpg"

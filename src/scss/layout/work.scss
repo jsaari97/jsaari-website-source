@@ -8,21 +8,15 @@ $work-height-large: 640px;
 }
 
 article {
-  text-align: center;
-  display: flex;
-  flex-flow: row nowrap;
-  width: 960px;
   @include for-phone-only() {
+    @include size(calc(100vw - 16px), $work-height-small);
     position: relative;
-    width: calc(100vw - 16px);
-    height: $work-height-small;
     margin-bottom: 8px;
     border-radius: 1px;
     overflow: hidden;
-    flex-flow: row nowrap;
-    align-items: flex-end;
   }
   @include for-tablet-portrait-up() {
+    display: flex;
     width: 100%;
     margin-bottom: 16px;
   }
@@ -35,61 +29,6 @@ article {
     margin-bottom: 48px;
   }
 
-  .title {
-    margin-top: 100px;
-    font-size: 3rem;
-    font-weight: 300;
-    color: lighten($header-color, 2.5%);
-    @include for-phone-only() {
-      margin: 12px 0 8px;
-      font-size: 2rem;
-      font-weight: 400;
-    }
-  }
-  .description {
-    font-size: 1.8rem;
-    font-weight: 400;
-    line-height: 3rem;
-    @include for-phone-only() {
-      margin: 0 0 16px;
-      font-size: 1.6rem;
-      color: darken($font-color, 5%);
-    }
-  }
-
-  &.left .article-image-container {
-    right: 0;
-    border-top-left-radius: $work-height-medium / 2;
-    border-bottom-left-radius: $work-height-medium / 2;
-    @include for-phone-only() {
-      border-radius: 2px;
-      overflow: hidden;
-    }
-    @include for-big-desktop-up() {
-      border-top-left-radius: $work-height-large / 2;
-      border-bottom-left-radius: $work-height-large / 2;
-    }
-  }
-  &.right {
-    flex-direction: row-reverse;
-    @include for-phone-only() {
-        flex-flow: row nowrap;
-    }
-    .article-image-container {
-      left: 0;
-      border-top-right-radius: $work-height-medium / 2;
-      border-bottom-right-radius: $work-height-medium / 2;
-
-      @include for-phone-only() {
-        border-radius: 2px;
-        overflow: hidden;
-      }
-      @include for-big-desktop-up() {
-        border-top-right-radius: $work-height-large / 2;
-        border-bottom-right-radius: $work-height-large / 2;
-      }
-    }
-  }
   &:last-of-type {
     @include for-phone-only() {
       margin-bottom: 40px;
@@ -102,74 +41,108 @@ article {
     }
   }
 }
-.article-body {
-  flex: 0 0 50%;
-  height: $work-height-medium;
 
+.article-body {
+  text-align: center;
+  
   @include for-phone-only() {
-    will-change: transform;
-    position: absolute;
+    @include size(100%, 180px);
+    @include position(absolute, null null 0 null);
     background: rgba(255, 255, 255, .9);
-    width: 100%;
-    height: 180px;
+    will-change: transform;
     transform: translateY(130px);
     transition: transform 250ms ease;
-
+    
     &::before {
+      @include size(100%, 360px);
+      @include position(absolute, -310px null null 0);
       content: "";
-      height: 360px;
-      position: absolute;
-      top: -310px;
-      left: 0;
-      width: 100%;
     }
 
     a {
       margin-bottom: 16px;
     }
   }
+  @include for-tablet-portrait-up() {
+    flex: 0 0 50%;
+    height: $work-height-medium;
+  }
   @include for-big-desktop-up() {
     height: $work-height-large;
   }
 }
 
-article.right,
-article.left {
-  @include for-tablet-portrait-up() {
-    .article-image-container.expand {
-      width: 100vw;
-      border-radius: 2px;
-    }
-  }
+.article-title {
+  margin-top: 100px;
+  font-size: 3rem;
+  font-weight: 300;
+  
   @include for-phone-only() {
-    .article-body.expand {
-      transform: translateY(0);
+    margin: 12px 0 8px;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  @include for-tablet-portrait-up() {
+    color: lighten($header-color, 2.5%);
+  }
+}
 
-      &::before {
-        content: "";
-        height: (360px / 2);
-        position: absolute;
-        top: (-310px / 2 - 25px);
-        left: 0;
-        width: 100%;
-      }
-    }
+.article-description {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 3rem;
+
+  @include for-phone-only() {
+    margin: 0 0 16px;
+    font-size: 1.6rem;
+    color: darken($font-color, 5%);
+  }
+}
+
+article.left .article-image-container {
+  @include for-phone-only() {
+    border-radius: 2px;
+  }
+  @include for-tablet-portrait-up() {
+    right: 0;
+    border-top-left-radius: $work-height-medium / 2;
+    border-bottom-left-radius: $work-height-medium / 2;
+  }
+  @include for-big-desktop-up() {
+    border-top-left-radius: $work-height-large / 2;
+    border-bottom-left-radius: $work-height-large / 2;
+  }
+}
+article.right .article-image-container {
+  @include for-phone-only() {
+    border-radius: 2px;
+  }
+  @include for-tablet-portrait-up() {
+    left: 0;
+    border-top-right-radius: $work-height-medium / 2;
+    border-bottom-right-radius: $work-height-medium / 2;
+    flex-direction: row-reverse;
+  }
+  @include for-big-desktop-up() {
+    border-top-right-radius: $work-height-large / 2;
+    border-bottom-right-radius: $work-height-large / 2;
+  }
+}
+article.right {
+  @include for-tablet-portrait-up() {
+    justify-content: flex-end;
   }
 }
 
 .article-image-container {
-  will-change: width;
+  @include size(50vw, $work-height-medium);
   position: absolute;
-  width: 50vw;
-  height: $work-height-medium;
   overflow: hidden;
-  transition: transform 500ms linear;
   z-index: 2;
 
   @include for-phone-only() {
+    @include size(calc(100vw - 16px), $work-height-small);
     top: 0;
-    width: calc(100vw - 16px);
-    height: $work-height-small;
     z-index: -1;
   }
   @include for-big-desktop-up() {
@@ -177,23 +150,15 @@ article.left {
   }
 
   img {
-    will-change: transform;
-    @include position(absolute, 0 0 0 0);
-    
+    @include position(relative, null null null 50%);
+    transform: translateX(-50%);
     min-width: 50vw;
     min-height: $work-height-medium;
     margin: auto;
-    transition: transform 500ms linear;
 
     @include for-phone-only() {
-      @include position(relative, null null null 50%);
-      transform: translateX(-50%);
       min-width: 100vw;
       min-height: $work-height-small;
-    }
-    @include for-tablet-portrait-up() {
-      left: 50%;
-      transform: translateX(-50%);
     }
     @include for-big-desktop-up() {
       min-height: $work-height-large;
