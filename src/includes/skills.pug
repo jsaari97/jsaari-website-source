@@ -1,12 +1,12 @@
-section(id="skills" class="skills-section")
+section(id="skills" class="skill-section")
   h3.section-header Skills
   .skill-container
     each skill in skills
-      .skill-circle
+      .skill-item
         h4.skill-name #{skill.name}
-        svg(xmlns="http://www.w3.org/2000/svg" version="1.1" viewbox="0 0 100 100")
+        svg(class="skill-svg" xmlns="http://www.w3.org/2000/svg" version="1.1" viewbox="0 0 100 100")
           defs
             linearGradient(id="gradient" gradientUnits="objectBoundingBox" x1="-0.05" y1="-0.7" x2="-0.5" y2="1")
               stop(offset="0%" stop-color="#EFD554")
               stop(offset="100%" stop-color="#8BCE5B")
-          circle(class="circle-path" cx="50" cy="50" r="40" stroke="url(#gradient)" stroke-width="12px" fill="none" style='stroke-dasharray: 250.921, 250.921, ' + skill.amount)
+          circle(class="circle-path" cx="50" cy="50" r="40" stroke="url(#gradient)" stroke-width="12px" fill="none" style='stroke-dashoffset: 500; stroke-dasharray: 250, 250, ' + skill.amount)

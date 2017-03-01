@@ -6,19 +6,15 @@ article.left {
       border-radius: 2px;
     }
   }
+}
+@include for-phone-only() {
+  .article-body.expand {
+    transform: translateY(0);
 
-  @include for-phone-only() {
-    .article-body.expand {
-      transform: translateY(0);
-
-      &::before {
-        content: "";
-        height: (360px / 2);
-        position: absolute;
-        top: (-310px / 2 - 25px);
-        left: 0;
-        width: 100%;
-      }
+    &::before {
+      content: "";
+      height: (360px / 2);
+      top: (-310px / 2 - 25px);
     }
   }
 }

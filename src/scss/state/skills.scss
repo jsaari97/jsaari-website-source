@@ -1,0 +1,7 @@
+.skill {
+  @include for-desktop-up() {
+    &-svg:hover {
+      transform: rotate(-90deg) scale(1.1);
+    }
+  }
+}

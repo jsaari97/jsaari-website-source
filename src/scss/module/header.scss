@@ -1,13 +1,13 @@
 .headroom {
-  will-change: transform;
-  transition: transform 200ms linear, background 200ms ease;
-  height: 100px;
-  width: 100%;
+  @include size(100%, 100px);
   @include position(fixed, 0 null null 0);
+  will-change: transform, background;
+  transition: transform 200ms linear, background 200ms ease;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   z-index: $z-header;
+  
   @include for-phone-only() {
     height: 64px;
   }
@@ -48,15 +48,16 @@
     @include size(48px);
     opacity: .8;
   }
+
   @include for-phone-only() {
     display: none;
   }
 }
 .header-contact {
-  flex: 0;
   margin-left: 24px;
   display: flex;
   flex-flow: column wrap;
+
   @include for-phone-only() {
     flex-flow: row nowrap;
     justify-content: center;
@@ -66,8 +67,9 @@
     display: flex;
     align-items: center;
     margin-bottom: 8px;
+
     @include for-phone-only() {
-      margin-right: 8px;
+      margin: 0 8px 0 0;
       &:first-of-type {
         display: none;
       }
@@ -85,14 +87,15 @@
     font-size: 1.2rem;
   }
   svg {
+    @include size(16px);
     fill: #fff;
     opacity: .8;
     order: 1;
-    @include size(16px);
   }
 }
 .header-menu {
   margin-left: auto;
+
   @include for-phone-only() {
     margin: 0 auto;
   }
@@ -106,6 +109,7 @@
     padding: 0 16px;
     font-size: 2rem;
     font-weight: 300;
+    
     @include for-phone-only() {
       line-height: 32px;
       font-size: 5vw;
