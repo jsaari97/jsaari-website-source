@@ -4,8 +4,8 @@ import 'vanilla-ripplejs'
 import 'zenscroll'
 import './work.js'
 
-const headroom = new Headroom(document.querySelector('header')).init()
-const lazyLoad = new LazyLoad({
+new Headroom(document.querySelector('header')).init()
+new LazyLoad({
     threshold: 1000,
 })
 

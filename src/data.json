@@ -1,7 +1,7 @@
 {
   "title": "Jim Saari's Personal Website - Developer & Designer",
   "description": "Web developer and designer - Personal portfolio website of Jim Saari.",
-  "phone": "50 5411606",
+  "phone": "+358505411606",
   "email": "jim.saari97@gmail.com",
   "menu": [
     {
@@ -24,88 +24,58 @@
   "skills": [
     {
       "name": "Design",
-      "amount": 190
+      "amount": 80
     },
     {
       "name": "Frontend",
-      "amount": 170
+      "amount": 100
     },
     {
       "name": "Backend",
-      "amount": 125
+      "amount": 75
     },
     {
       "name": "Sysadmin",
-      "amount": 90
+      "amount": 50
     }
   ],
   "about": [
     {
       "title": "Info",
       "icon": "person",
-      "list": [
-        "Jim Saari",
-        "19 years old"
-      ]
+      "list": ["Jim Saari", "22 years old"]
     },
     {
       "title": "Hobbies",
       "icon": "hobbies",
-      "list": [
-        "Programming",
-        "Game Development",
-        "Art",
-        "Running",
-        "Lifting"
-      ]
+      "list": ["Programming", "Art", "Running", "Biking", "Lifting", "Music"]
     },
     {
       "title": "Location",
       "icon": "location",
-      "list": [
-        "Kronoby",
-        "Western Finland",
-        "Finland"
-      ]
+      "list": ["Kronoby", "Western Finland", "Finland"]
     },
     {
       "title": "Languages",
       "icon": "language",
-      "list": [
-        "Swedish",
-        "Finnish",
-        "English"
-      ]
+      "list": ["Swedish", "Finnish", "English"]
     },
     {
       "title": "Programming",
       "icon": "code",
-      "list": [
-        "JavaScript",
-        "HTML5",
-        "Sass",
-        "PHP",
-        "C#"
-      ]
+      "list": ["JavaScript", "HTML5", "CSS", "TypeScript", "Node.js", "Elixir"]
     },
     {
       "title": "Software",
       "icon": "apps",
-      "list": [
-        "Photoshop",
-        "Illustrator",
-        "Sketch",
-        "Blender",
-        "Vegas Pro",
-        "Unity"
-      ]
+      "list": ["Photoshop", "Illustrator", "Sketch", "Blender", "Unity"]
     }
   ],
   "work": [
     {
       "title": "Domain Dynamo",
       "description": "A tool to generate domain names.<br>Built with Vue.js and Express.js.",
-      "image": "dynamo",
+      "image": "/images/dynamo",
       "alt": "Domain Dynamo",
       "button": {
         "title": "Try it",
@@ -113,19 +83,9 @@
       }
     },
     {
-      "title": "Bird Droppings",
-      "description": "Mobile game about a pooping bird.<br>Made in Unity and published on Android.",
-      "image": "droppings",
-      "alt": "Bird Droppings",
-      "button": {
-        "title": "Google Play",
-        "url": "https://play.google.com/store/apps/details?id=com.jimsaari.birddroppings"
-      }
-    },
-    {
       "title": "Workstation",
       "description": "Illustration of my workstation.<br>Rendered with Blender Cycles.",
-      "image": "workstation",
+      "image": "/images/workstation",
       "alt": "Workstation"
     }
   ],
@@ -149,21 +109,9 @@
       "openTab": true
     },
     {
-      "username": "@jSaari97",
-      "url": "https://twitter.com/jSaari97",
-      "icon": "twitter",
-      "openTab": true
-    },
-    {
       "username": "jsaari97",
       "url": "https://github.com/jsaari97",
       "icon": "github",
-      "openTab": true
-    },
-    {
-      "username": "@langkalisa",
-      "url": "https://www.instagram.com/langkalisa",
-      "icon": "instagram",
       "openTab": true
     }
   ]

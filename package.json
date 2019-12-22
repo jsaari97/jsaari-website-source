@@ -4,37 +4,40 @@
   "version": "1.0.0",
   "author": "Jim Saari",
   "license": "MIT",
+  "engines": {
+    "node": "10.12.0"
+  },
   "scripts": {
-    "dev": "gulp",
-    "build": "gulp production"
+    "start": "cross-env NODE_ENV=development gulp",
+    "build": "cross-env NODE_ENV=production gulp production"
   },
   "devDependencies": {
-    "autoprefixer": "^6.7.4",
-    "babel-cli": "^6.23.0",
-    "babel-preset-es2015": "^6.22.0",
-    "babelify": "^7.3.0",
-    "browser-sync": "^2.18.8",
-    "browserify": "^14.1.0",
-    "gulp": "^3.9.1",
-    "gulp-postcss": "^6.3.0",
-    "gulp-pug": "^3.2.0",
-    "gulp-responsive": "^2.7.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-sass-glob": "^1.0.8",
-    "gulp-sitemap": "^4.2.0",
-    "gulp-sourcemaps": "^2.4.1",
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "autoprefixer": "^9.7.3",
+    "babel-loader": "^8.0.6",
+    "browser-sync": "^2.26.7",
+    "core-js": "^3.5.0",
+    "cross-env": "^6.0.3",
+    "gulp": "^4.0.0",
+    "gulp-load-plugins": "^2.0.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-pug": "^4.0.0",
+    "gulp-responsive": "2.14.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-sitemap": "^7.6.0",
+    "gulp-sourcemaps": "^2.6.5",
     "gulp-svg-sprite": "^1.3.6",
-    "gulp-uglify": "^2.0.1",
-    "sharp": "^0.17.2",
-    "uglify": "^0.1.5",
     "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0"
+    "vinyl-source-stream": "^2.0.0",
+    "webpack": "^4.41.4"
   },
   "dependencies": {
     "bourbon": "^5.0.0-beta.7",
-    "headroom.js": "^0.9.3",
-    "vanilla-lazyload": "^4.0.4",
+    "headroom.js": "^0.10.3",
+    "vanilla-lazyload": "^12.4.0",
     "vanilla-ripplejs": "^1.0.3",
-    "zenscroll": "^3.3.0"
+    "zenscroll": "^4.0.2"
   }
 }

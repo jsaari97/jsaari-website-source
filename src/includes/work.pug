@@ -13,9 +13,9 @@ section(id="work")
             .rippleJS
       .article-image-container
         img(
-          data-original="images/" + item.image + "-large.jpg"
-          data-original-set="images/" + item.image + "-small.jpg 480w, images/" + item.image + "-medium.jpg 768w, images/" + item.image + "-large.jpg 1280w, images/" + item.image + "-xlarge.jpg 1920w"
-          sizes="(min-width: 600px) 50vw, 100vw"
+          data-src=item.image + "-large.jpg"
+          data-srcset=item.image + "-small.jpg 480w, " + item.image + "-medium.jpg 768w, " + item.image + "-large.jpg 1280w, " + item.image + "-xlarge.jpg 1920w"
+          data-sizes="(min-width: 600px) 50vw, 100vw"
           alt=item.alt
         )
     - count++
